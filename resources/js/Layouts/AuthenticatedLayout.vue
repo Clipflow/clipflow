@@ -47,7 +47,7 @@ const sidebarOpen = ref(false);
                             <nav class="mt-5 px-2 space-y-1">
                                 <BreezeResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     <HomeIcon class="mr-3 flex-shrink-0 h-6 w-6 text-gray-300"/>
-                                    Dashboard
+                                    {{ $t('Dashboard') }}
                                 </BreezeResponsiveNavLink>
                             </nav>
                         </div>
@@ -61,8 +61,7 @@ const sidebarOpen = ref(false);
                                     <div class="ml-3">
                                         <p class="text-base font-medium text-white">{{ $page.props.auth.user.name }}</p>
                                         <Link :href="route('profile.edit')"
-                                              class="text-sm font-medium text-indigo-200 group-hover:text-white">View
-                                            profile
+                                              class="text-sm font-medium text-indigo-200 group-hover:text-white">{{ $t('Edit account')}}
                                         </Link>
                                     </div>
                                 </div>
@@ -88,7 +87,7 @@ const sidebarOpen = ref(false);
                     <nav class="mt-5 flex-1 px-2 space-y-1">
                         <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             <HomeIcon class="mr-4 flex-shrink-0 h-6 w-6 text-gray-300"/>
-                            Dashboard
+                            {{ $t('Dashboard') }}
                         </BreezeNavLink>
                     </nav>
                 </div>
@@ -103,7 +102,7 @@ const sidebarOpen = ref(false);
                             <div class="ml-3">
                                 <p class="text-base font-medium text-white">{{ $page.props.auth.user.name }}</p>
                                 <Link :href="route('profile.edit')"
-                                      class="text-sm font-medium text-gray-200 group-hover:text-white">Edit account
+                                      class="text-sm font-medium text-gray-200 group-hover:text-white">{{ $t('Edit account')}}
                                 </Link>
                             </div>
                         </div>
@@ -116,7 +115,7 @@ const sidebarOpen = ref(false);
                 <button type="button"
                         class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                         @click="sidebarOpen = true">
-                    <span class="sr-only">Open sidebar</span>
+                    <span class="sr-only">{{ $t('Open sidebar')}}</span>
                     <Bars4Icon class="h-6 w-6"/>
                 </button>
             </div>

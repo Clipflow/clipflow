@@ -12,11 +12,11 @@ defineProps({
 </script>
 
 <template>
-    <Head title="Profile" />
+    <Head :title="$t('Profile')" />
 
     <AuthenticatedLayout>
         <template #header>
-            Profile
+            {{ $t('Profile')}}
         </template>
 
         <div>
