@@ -19917,7 +19917,7 @@ __webpack_require__.r(__webpack_exports__);
     expose();
     var props = __props;
     var classes = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(function () {
-      return props.active ? 'bg-indigo-800 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md' : 'text-white hover:bg-indigo-600 hover:bg-opacity-75 group flex items-center px-2 py-2 text-sm font-medium rounded-md';
+      return props.active ? 'bg-[#40474a] text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md' : 'text-white hover:bg-[#474e51] hover:bg-opacity-75 group flex items-center px-2 py-2 text-sm font-medium rounded-md';
     });
     var __returned__ = {
       props: props,
@@ -19993,7 +19993,7 @@ __webpack_require__.r(__webpack_exports__);
     expose();
     var props = __props;
     var classes = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(function () {
-      return props.active ? 'bg-indigo-800 text-white group flex items-center px-2 py-2 text-base font-medium rounded-md' : 'text-white hover:bg-indigo-600 hover:bg-opacity-75 group flex items-center px-2 py-2 text-base font-medium rounded-md';
+      return props.active ? 'bg-[#40474a] text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md' : 'text-white hover:bg-[#474e51] hover:bg-opacity-75 group flex items-center px-2 py-2 text-sm font-medium rounded-md';
     });
     var __returned__ = {
       props: props,
@@ -21352,7 +21352,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "relative flex-1 flex flex-col max-w-xs w-full bg-indigo-700"
+  "class": "relative flex-1 flex flex-col max-w-xs w-full bg-[#323a3e]"
 };
 var _hoisted_2 = {
   "class": "absolute top-0 right-0 -mr-12 pt-2"
@@ -21370,7 +21370,7 @@ var _hoisted_6 = {
   "class": "mt-5 px-2 space-y-1"
 };
 var _hoisted_7 = {
-  "class": "flex-shrink-0 flex border-t border-indigo-800 p-4"
+  "class": "flex-shrink-0 flex bg-[#2e3639] p-4"
 };
 var _hoisted_8 = {
   href: "#",
@@ -21394,7 +21394,7 @@ var _hoisted_14 = {
   "class": "hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0"
 };
 var _hoisted_15 = {
-  "class": "flex-1 flex flex-col min-h-0 bg-indigo-700"
+  "class": "flex-1 flex flex-col min-h-0 bg-[#323a3e]"
 };
 var _hoisted_16 = {
   "class": "flex-1 flex flex-col pt-5 pb-4 overflow-y-auto"
@@ -21406,7 +21406,7 @@ var _hoisted_18 = {
   "class": "mt-5 flex-1 px-2 space-y-1"
 };
 var _hoisted_19 = {
-  "class": "flex-shrink-0 flex border-t border-indigo-800 p-4"
+  "class": "flex-shrink-0 flex bg-[#2e3639] p-4"
 };
 var _hoisted_20 = {
   href: "#",
@@ -21420,7 +21420,7 @@ var _hoisted_23 = {
   "class": "ml-3"
 };
 var _hoisted_24 = {
-  "class": "text-sm font-medium text-white"
+  "class": "text-base font-medium text-white"
 };
 var _hoisted_25 = {
   "class": "md:pl-64 flex flex-col flex-1"
@@ -21510,13 +21510,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
                 _: 1 /* STABLE */
               }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["WhiteLogo"], {
                 "class": "h-8 w-auto"
-              })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeNavLink"], {
+              })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeResponsiveNavLink"], {
                 href: _ctx.route('dashboard'),
                 active: _ctx.route().current('dashboard')
               }, {
                 "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
                   return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["HomeIcon"], {
-                    "class": "mr-3 flex-shrink-0 h-6 w-6 text-indigo-300"
+                    "class": "mr-3 flex-shrink-0 h-6 w-6 text-brand-light"
                   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Dashboard ")];
                 }),
                 _: 1 /* STABLE */
@@ -21544,13 +21544,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1 /* STABLE */
   }, 8 /* PROPS */, ["show"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Static sidebar for desktop "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar component, swap this element with another sidebar if you like "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["WhiteLogo"], {
     "class": "h-8 w-auto text-center inline"
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeResponsiveNavLink"], {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeNavLink"], {
     href: _ctx.route('dashboard'),
     active: _ctx.route().current('dashboard')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["HomeIcon"], {
-        "class": "mr-4 flex-shrink-0 h-6 w-6 text-indigo-300"
+        "class": "mr-4 flex-shrink-0 h-6 w-6 text-brand-light"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Dashboard ")];
     }),
     _: 1 /* STABLE */
@@ -21560,7 +21560,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     alt: ""
   }, null, 8 /* PROPS */, _hoisted_22)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.auth.user.name), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
     href: _ctx.route('profile.edit'),
-    "class": "text-xs font-medium text-indigo-200 group-hover:text-white"
+    "class": "text-sm font-medium text-gray-200 group-hover:text-white"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Edit account ")];

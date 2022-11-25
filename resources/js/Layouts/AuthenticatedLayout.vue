@@ -27,7 +27,7 @@ const sidebarOpen = ref(false);
                                  enter-from="-translate-x-full" enter-to="translate-x-0"
                                  leave="transition ease-in-out duration-300 transform" leave-from="translate-x-0"
                                  leave-to="-translate-x-full">
-                    <div class="relative flex-1 flex flex-col max-w-xs w-full bg-indigo-700">
+                    <div class="relative flex-1 flex flex-col max-w-xs w-full bg-[#323a3e]">
                         <TransitionChild as="template" enter="ease-in-out duration-300" enter-from="opacity-0"
                                          enter-to="opacity-100" leave="ease-in-out duration-300"
                                          leave-from="opacity-100" leave-to="opacity-0">
@@ -45,13 +45,13 @@ const sidebarOpen = ref(false);
                                 <WhiteLogo class="h-8 w-auto"/>
                             </div>
                             <nav class="mt-5 px-2 space-y-1">
-                                <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    <HomeIcon class="mr-3 flex-shrink-0 h-6 w-6 text-indigo-300"/>
+                                <BreezeResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                                    <HomeIcon class="mr-3 flex-shrink-0 h-6 w-6 text-brand-light"/>
                                     Dashboard
-                                </BreezeNavLink>
+                                </BreezeResponsiveNavLink>
                             </nav>
                         </div>
-                        <div class="flex-shrink-0 flex border-t border-indigo-800 p-4">
+                        <div class="flex-shrink-0 flex bg-[#2e3639] p-4">
                             <a href="#" class="flex-shrink-0 group block">
                                 <div class="flex items-center">
                                     <div>
@@ -80,19 +80,19 @@ const sidebarOpen = ref(false);
         <!-- Static sidebar for desktop -->
         <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
             <!-- Sidebar component, swap this element with another sidebar if you like -->
-            <div class="flex-1 flex flex-col min-h-0 bg-indigo-700">
+            <div class="flex-1 flex flex-col min-h-0 bg-[#323a3e]">
                 <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
                     <div class="flex items-center flex-shrink-0 px-4 mx-auto">
                         <WhiteLogo class="h-8 w-auto text-center inline"/>
                     </div>
                     <nav class="mt-5 flex-1 px-2 space-y-1">
-                        <BreezeResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            <HomeIcon class="mr-4 flex-shrink-0 h-6 w-6 text-indigo-300"/>
+                        <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                            <HomeIcon class="mr-4 flex-shrink-0 h-6 w-6 text-brand-light"/>
                             Dashboard
-                        </BreezeResponsiveNavLink>
+                        </BreezeNavLink>
                     </nav>
                 </div>
-                <div class="flex-shrink-0 flex border-t border-indigo-800 p-4">
+                <div class="flex-shrink-0 flex bg-[#2e3639] p-4">
                     <a href="#" class="flex-shrink-0 w-full group block">
                         <div class="flex items-center">
                             <div>
@@ -101,9 +101,9 @@ const sidebarOpen = ref(false);
                                      alt="">
                             </div>
                             <div class="ml-3">
-                                <p class="text-sm font-medium text-white">{{ $page.props.auth.user.name }}</p>
+                                <p class="text-base font-medium text-white">{{ $page.props.auth.user.name }}</p>
                                 <Link :href="route('profile.edit')"
-                                      class="text-xs font-medium text-indigo-200 group-hover:text-white">Edit account
+                                      class="text-sm font-medium text-gray-200 group-hover:text-white">Edit account
                                 </Link>
                             </div>
                         </div>
