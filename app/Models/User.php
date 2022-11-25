@@ -20,7 +20,6 @@ class User extends Authenticatable
      */
     protected $appends = ['avatar'];
 
-
     /**
      * The attributes that are mass assignable.
      *
@@ -54,7 +53,7 @@ class User extends Authenticatable
     protected function avatar(): Attribute
     {
         return Attribute::make(
-            get: fn () => 'https://www.gravatar.com/avatar/' . md5($this->getAttributeValue('email')),
+            get: fn () => 'https://www.gravatar.com/avatar/'.md5($this->getAttributeValue('email')),
         );
     }
 }
