@@ -46,7 +46,7 @@ const sidebarOpen = ref(false);
                             </div>
                             <nav class="mt-5 px-2 space-y-1">
                                 <BreezeResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    <HomeIcon class="mr-3 flex-shrink-0 h-6 w-6 text-brand-light"/>
+                                    <HomeIcon class="mr-3 flex-shrink-0 h-6 w-6 text-gray-300"/>
                                     Dashboard
                                 </BreezeResponsiveNavLink>
                             </nav>
@@ -87,7 +87,7 @@ const sidebarOpen = ref(false);
                     </div>
                     <nav class="mt-5 flex-1 px-2 space-y-1">
                         <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            <HomeIcon class="mr-4 flex-shrink-0 h-6 w-6 text-brand-light"/>
+                            <HomeIcon class="mr-4 flex-shrink-0 h-6 w-6 text-gray-300"/>
                             Dashboard
                         </BreezeNavLink>
                     </nav>
