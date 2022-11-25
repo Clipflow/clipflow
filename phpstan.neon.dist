@@ -1,0 +1,46 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - app
+
+    # level 9 is the highest level
+    # We're using level 8 per https://phpstan.org/user-guide/rule-levels
+    level: 8
+
+    # PHP 8.0 is the lowest supported version
+    phpVersion: 80000
+
+    bootstrapFiles:
+    - bootstrap/phpstan.php
+
+    # Disable reporting unused ignores
+    reportUnmatchedIgnoredErrors: false
+
+    ignoreErrors:
+    # The first three lines are ignoring user errors as auth can be null, this shouldn't cause any issues as the auth middleware is present
+        - '#App\\Models\\User\|null given.#'
+        - '#Cannot access property .* on App\\Models\\User#'
+        - '#Cannot call method .* on App\\Models\\User#'
+        - '#PHPDoc tag @throws with type .*?Psr\\SimpleCache\\InvalidArgumentException.*? is not subtype of Throwable#'
+        - '#PHPDoc tag @var#'
+        - '#Call to an undefined method Illuminate\\Support\\HigherOrder#'
+        - '#no value type specified in iterable type Jane\\Component\\OpenApi3\\JsonSchema\\Model\\#'
+        -
+            message: '#^Undefined variable: \$this$#'
+            paths: [
+            'tests/*'
+            ]
+        -
+            message: '#Call to an undefined method Pest\\Expectation|Pest\\Support\\Extendable::#'
+            paths: [
+            'tests/*'
+            ]
+
+    excludePaths:
+        - ./Config/**/*.php
+
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
