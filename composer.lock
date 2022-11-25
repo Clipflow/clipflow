@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12350321fa61186a8610cdd84b90542b",
+    "content-hash": "6c20b62934491b52868bb25161da34d5",
     "packages": [
         {
             "name": "brick/math",
@@ -968,23 +968,27 @@
         },
         {
             "name": "laravel/breeze",
-            "version": "v1.9.2",
+            "version": "v1.15.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/breeze.git",
-                "reference": "6f6a2588c429ea39821ec9add48442b05fe343f7"
+                "reference": "08ca3c51a95ec70b98ce8d3eab4f810018dff205"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/breeze/zipball/6f6a2588c429ea39821ec9add48442b05fe343f7",
-                "reference": "6f6a2588c429ea39821ec9add48442b05fe343f7",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/08ca3c51a95ec70b98ce8d3eab4f810018dff205",
+                "reference": "08ca3c51a95ec70b98ce8d3eab4f810018dff205",
                 "shasum": ""
             },
             "require": {
-                "illuminate/filesystem": "^8.42|^9.0",
-                "illuminate/support": "^8.42|^9.0",
-                "illuminate/validation": "^8.42|^9.0",
-                "php": "^7.3|^8.0"
+                "illuminate/console": "^9.21",
+                "illuminate/filesystem": "^9.21",
+                "illuminate/support": "^9.21",
+                "illuminate/validation": "^9.21",
+                "php": "^8.0.2"
+            },
+            "conflict": {
+                "laravel/framework": "<9.37.0"
             },
             "type": "library",
             "extra": {
@@ -1021,7 +1025,7 @@
                 "issues": "https://github.com/laravel/breeze/issues",
                 "source": "https://github.com/laravel/breeze"
             },
-            "time": "2022-05-30T13:21:35+00:00"
+            "time": "2022-11-21T12:48:15+00:00"
         },
         {
             "name": "laravel/framework",
