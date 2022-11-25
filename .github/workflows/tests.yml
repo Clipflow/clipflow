@@ -23,9 +23,13 @@ jobs:
           key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-php-
+
       - name: Install dependencies
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Install application key
+        - run: php artisan key:generate
 
       - name: Run test suite
         run: vendor/bin/phpunit --verbose
