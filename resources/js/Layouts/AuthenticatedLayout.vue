@@ -42,7 +42,9 @@ const sidebarOpen = ref(false);
                         </TransitionChild>
                         <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                             <div class="flex-shrink-0 flex items-center px-4">
+                                <Link :href="route('dashboard')">
                                 <WhiteLogo class="h-8 w-auto"/>
+                                </Link>
                             </div>
                             <nav class="mt-5 px-2 space-y-1">
                                 <BreezeResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
@@ -82,7 +84,9 @@ const sidebarOpen = ref(false);
             <div class="flex-1 flex flex-col min-h-0 bg-[#323a3e]">
                 <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
                     <div class="flex items-center flex-shrink-0 px-4 mx-auto">
+                        <Link :href="route('dashboard')">
                         <WhiteLogo class="h-8 w-auto text-center inline"/>
+                        </Link>
                     </div>
                     <nav class="mt-5 flex-1 px-2 space-y-1">
                         <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
