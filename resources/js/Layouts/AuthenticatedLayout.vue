@@ -5,7 +5,7 @@ import BreezeResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import {Link} from '@inertiajs/inertia-vue3';
 
 // Icons
-import {HomeIcon, XCircleIcon, Bars4Icon} from '@heroicons/vue/24/solid';
+import {HomeIcon, XCircleIcon, Bars4Icon, UserGroupIcon} from '@heroicons/vue/24/solid';
 import {Dialog, DialogOverlay, TransitionChild, TransitionRoot} from '@headlessui/vue'
 import WhiteLogo from "@/Components/Assets/WhiteLogo";
 
@@ -51,6 +51,10 @@ const sidebarOpen = ref(false);
                                     <HomeIcon class="mr-3 flex-shrink-0 h-6 w-6 text-gray-300"/>
                                     {{ $t('Dashboard') }}
                                 </BreezeResponsiveNavLink>
+                                <BreezeResponsiveNavLink :href="route('groups.index')" :active="route().current('groups.*')">
+                                    <UserGroupIcon class="mr-3 flex-shrink-0 h-6 w-6 text-gray-300"/>
+                                    {{ $t('Groups') }}
+                                </BreezeResponsiveNavLink>
                             </nav>
                         </div>
                         <div class="flex-shrink-0 flex bg-[#2e3639] p-4">
@@ -92,6 +96,10 @@ const sidebarOpen = ref(false);
                         <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             <HomeIcon class="mr-4 flex-shrink-0 h-6 w-6 text-gray-300"/>
                             {{ $t('Dashboard') }}
+                        </BreezeNavLink>
+                        <BreezeNavLink :href="route('groups.index')" :active="route().current('groups.*')">
+                        <UserGroupIcon class="mr-4 flex-shrink-0 h-6 w-6 text-gray-300"/>
+                        {{ $t('Groups') }}
                         </BreezeNavLink>
                     </nav>
                 </div>
