@@ -5,7 +5,7 @@ import BreezeResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import {Link} from '@inertiajs/inertia-vue3';
 
 // Icons
-import {HomeIcon, XCircleIcon, Bars4Icon} from '@heroicons/vue/24/outline';
+import {HomeIcon, XCircleIcon, Bars4Icon} from '@heroicons/vue/24/solid';
 import {Dialog, DialogOverlay, TransitionChild, TransitionRoot} from '@headlessui/vue'
 import WhiteLogo from "@/Components/Assets/WhiteLogo";
 
