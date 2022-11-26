@@ -37,7 +37,6 @@ test('Admins can view a group', function () {
 });
 
 test('Guests cannot view a group', function () {
-
     $group = Group::factory()->create();
 
     $response = $this->get(route('groups.show', $group));
