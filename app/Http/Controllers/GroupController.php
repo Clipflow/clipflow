@@ -30,7 +30,6 @@ class GroupController extends Controller
      */
     public function index(Request $request): Response
     {
-
         $groups = Group::all();
 
         // filter groups shown based on url query
@@ -39,8 +38,6 @@ class GroupController extends Controller
                 $query->where('user_id', $request->user()->id);
             })->get();
         }
-
-
 
         return Inertia::render('Groups/Index', [
             'groups' => $groups,
