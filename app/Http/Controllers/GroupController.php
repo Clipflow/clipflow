@@ -32,10 +32,10 @@ class GroupController extends Controller
     {
         $groups = Group::all();
 
-       if ($request->has('filter') && $request->get('filter') === 'joined') {
-           $groups = Group::whereHas('members', function ($query) {
-               $query->where('user_id', auth()->id());
-           })->get();
+        if ($request->has('filter') && $request->get('filter') === 'joined') {
+            $groups = Group::whereHas('members', function ($query) {
+                $query->where('user_id', auth()->id());
+            })->get();
         }
 
         if ($request->has('filter') && $request->get('filter') === 'not-joined') {
