@@ -94,12 +94,7 @@ class GroupController extends Controller
     public function show(Group $group): Response
     {
         return Inertia::render('Groups/Show', [
-            'group' => [
-                'id' => $group->id,
-                'name' => $group->name,
-                'description' => $group->description,
-                'created_at' => $group->created_at->format('d/m/Y'),
-            ],
+            'group' => new GroupResource($group),
         ]);
     }
 

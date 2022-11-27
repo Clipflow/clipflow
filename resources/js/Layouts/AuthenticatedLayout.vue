@@ -10,6 +10,13 @@ import {Dialog, DialogOverlay, TransitionChild, TransitionRoot} from '@headlessu
 import WhiteLogo from "@/Components/Assets/WhiteLogo";
 
 const sidebarOpen = ref(false);
+
+const props = defineProps({
+    full: {
+        type: Boolean,
+        default: false,
+    },
+});
 </script>
 
 <template>
@@ -132,7 +139,7 @@ const sidebarOpen = ref(false);
                 </button>
             </div>
             <main class="flex-1">
-                <div class="py-6">
+                <div class="py-6" v-if="!full">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 mb-8" v-if="$slots.header">
                         <h1 class="text-2xl font-semibold text-gray-900">
                             <slot name="header"/>
@@ -140,7 +147,27 @@ const sidebarOpen = ref(false);
                     </div>
                     <transition name="fade" mode="out-in" appear>
                         <div :key="$page.url">
-                            <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8" v-if="!full">
+                                <slot/>
+                            </div>
+                            <div v-else>
+                                <slot/>
+                            </div>
+                        </div>
+                    </transition>
+                </div>
+                <div v-else>
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 mb-8" v-if="$slots.header">
+                        <h1 class="text-2xl font-semibold text-gray-900">
+                            <slot name="header"/>
+                        </h1>
+                    </div>
+                    <transition name="fade" mode="out-in" appear>
+                        <div :key="$page.url">
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8" v-if="!full">
+                                <slot/>
+                            </div>
+                            <div v-else>
                                 <slot/>
                             </div>
                         </div>

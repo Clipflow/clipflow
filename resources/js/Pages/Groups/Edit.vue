@@ -1,5 +1,5 @@
 <script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import GroupLayout from '@/Pages/Groups/Partials/GroupLayout.vue';
 import {Head} from '@inertiajs/inertia-vue3';
 import UpdateGroupForm from "@/Pages/Groups/Partials/UpdateGroupForm";
 import DeleteGroupForm from "@/Pages/Groups/Partials/DeleteGroupForm";
@@ -12,12 +12,12 @@ defineProps({
 <template>
     <Head :title="group.name"/>
 
-    <AuthenticatedLayout>
+    <GroupLayout :group="group">
         <div>
             <UpdateGroupForm :group="group"/>
         </div>
         <div>
             <DeleteGroupForm :group="group"/>
         </div>
-    </AuthenticatedLayout>
+    </GroupLayout>
 </template>
