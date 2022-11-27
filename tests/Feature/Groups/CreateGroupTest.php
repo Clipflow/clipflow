@@ -7,7 +7,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 uses(RefreshDatabase::class);
 
 test('Guests cannot render the group create view', function () {
-
     $this->get(route('groups.create'))
         ->assertRedirect(route('login'));
 
@@ -15,7 +14,6 @@ test('Guests cannot render the group create view', function () {
 });
 
 test('Users can render the group create view', function () {
-
     $user = User::factory()->create();
 
     $this->actingAs($user)
@@ -26,7 +24,6 @@ test('Users can render the group create view', function () {
 });
 
 test('Guests cannot create a group', function () {
-
     $this->post(route('groups.store'), [
         'name' => 'Test Group',
     ])
@@ -36,7 +33,6 @@ test('Guests cannot create a group', function () {
 });
 
 test('Users can create a group', function () {
-
     $user = User::factory()->create();
 
     $this->actingAs($user)
@@ -49,7 +45,6 @@ test('Users can create a group', function () {
 });
 
 test('Validation rules are required', function () {
-
     $user = User::factory()->create();
 
     $this->actingAs($user)
@@ -62,7 +57,6 @@ test('Validation rules are required', function () {
 });
 
 test('Image must be an image', function () {
-
     $user = User::factory()->create();
 
     $this->actingAs($user)

@@ -10,7 +10,6 @@ use Tests\TestCase;
 uses(TestCase::class, RefreshDatabase::class);
 
 test('admins scope returns admins', function () {
-
     $group = Group::factory()->create();
 
     $group->addMember($user = User::factory()->create(), GroupMember::ROLE_ADMIN);
@@ -21,7 +20,6 @@ test('admins scope returns admins', function () {
 });
 
 test('user scope returns only users', function () {
-
     $group = Group::factory()->create();
 
     $group->addMember($user = User::factory()->create(), GroupMember::ROLE_MEMBER);
@@ -32,7 +30,6 @@ test('user scope returns only users', function () {
 });
 
 test('addMember adds a member to the group', function () {
-
     $group = Group::factory()->create();
 
     $group->addMember($user = User::factory()->create());
@@ -41,7 +38,6 @@ test('addMember adds a member to the group', function () {
 });
 
 test('removeMember removes a member from the group', function () {
-
     $group = Group::factory()->create();
 
     $group->addMember($user = User::factory()->create());
@@ -52,7 +48,6 @@ test('removeMember removes a member from the group', function () {
 });
 
 test('returns true if the user is a member of the group', function () {
-
     $group = Group::factory()->create();
 
     $group->addMember($user = User::factory()->create());
@@ -61,14 +56,12 @@ test('returns true if the user is a member of the group', function () {
 });
 
 test('returns false if the user is not a member of the group', function () {
-
     $group = Group::factory()->create();
 
     $this->assertFalse($group->isMember(User::factory()->create()));
 });
 
 test('returns true if the user is an admin of the group', function () {
-
     $group = Group::factory()->create();
 
     $group->addMember($user = User::factory()->create(), GroupMember::ROLE_ADMIN);
@@ -77,14 +70,12 @@ test('returns true if the user is an admin of the group', function () {
 });
 
 test('returns false if the user is not an admin of the group', function () {
-
     $group = Group::factory()->create();
 
     $this->assertFalse($group->isAdmin(User::factory()->create()));
 });
 
 test('returns true if an image is set', function () {
-
     $group = Group::factory()->create();
 
     $group->processImage(UploadedFile::fake()->image('avatar.jpg'));
@@ -93,14 +84,12 @@ test('returns true if an image is set', function () {
 });
 
 test('returns false if an image is not set', function () {
-
     $group = Group::factory()->create(['image_url' => null]);
 
     $this->assertFalse($group->hasImage());
 });
 
 test('an image can be uploaded to the group', function () {
-
     $group = Group::factory()->create(['image_url' => null]);
 
     $group->processImage(UploadedFile::fake()->image('avatar.jpg'));
@@ -110,7 +99,6 @@ test('an image can be uploaded to the group', function () {
 });
 
 test('an image can be removed from the group', function () {
-
     $group = Group::factory()->create();
 
     $group->processImage(UploadedFile::fake()->image('avatar.jpg'));

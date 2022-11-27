@@ -47,7 +47,6 @@ test('group admins can render edit page', function () {
 });
 
 test('Guests cannot update group', function () {
-
     $group = Group::factory()->create();
 
     $response = $this->put(route('groups.update', $group), [
@@ -64,7 +63,6 @@ test('Guests cannot update group', function () {
 });
 
 test('users cannot update group', function () {
-
     $user = User::factory()->create();
     $group = Group::factory()->create();
 
@@ -82,7 +80,6 @@ test('users cannot update group', function () {
 });
 
 test('group members cannot update group', function () {
-
     $user = User::factory()->create();
     $group = Group::factory()->create();
 
@@ -102,7 +99,6 @@ test('group members cannot update group', function () {
 });
 
 test('group admins can update group', function () {
-
     $user = User::factory()->create();
     $group = Group::factory()->create();
 
@@ -122,7 +118,6 @@ test('group admins can update group', function () {
 });
 
 test('Validation rules are required', function () {
-
     $user = User::factory()->create();
     $group = Group::factory()->create();
 

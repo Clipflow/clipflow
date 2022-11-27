@@ -28,7 +28,6 @@ test('Users cannot delete a group', function () {
 });
 
 test('Group members cannot delete a group', function () {
-
     $group = Group::factory()->create();
     $user = User::factory()->create();
     $group->addMember($user);
@@ -55,4 +54,3 @@ test('Group owners can delete a group', function () {
     $this->assertDatabaseCount('groups', 0);
     $this->assertDatabaseCount('group_members', 0);
 });
-
