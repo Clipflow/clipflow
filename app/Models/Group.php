@@ -88,6 +88,16 @@ class Group extends Model
         return $this->image_url !== null;
     }
 
+    public function creator()
+    {
+        return $this->belongsTo(User::class, 'creator_id');
+    }
+
+    public function numberOfMembers()
+    {
+        return $this->members()->count();
+    }
+
     public static function boot(): void
     {
         parent::boot();

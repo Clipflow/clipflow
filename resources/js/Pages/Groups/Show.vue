@@ -1,14 +1,14 @@
 <script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import {Head} from '@inertiajs/inertia-vue3';
+import GroupLayout from '@/Pages/Groups/Partials/GroupLayout.vue';
+defineProps({
+    group: Object,
+});
 </script>
 
 <template>
-    <Head :title="$t('Groups')"/>
+    <Head :title="group.name"/>
+    <GroupLayout :group="group">
 
-    <AuthenticatedLayout>
-        <template #header>
-            {{ $t('Groups') }}
-        </template>
-    </AuthenticatedLayout>
+    </GroupLayout>
 </template>

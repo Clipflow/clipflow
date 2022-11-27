@@ -56,4 +56,12 @@ class User extends Authenticatable
             get: fn () => 'https://www.gravatar.com/avatar/'.md5($this->getAttributeValue('email')),
         );
     }
+
+    public function groups()
+    {
+        return $this->belongsToMany(Group::class, 'group_members')
+            ->using(GroupMember::class)
+            ->withTimestamps()
+            ->withPivot('role');
+    }
 }

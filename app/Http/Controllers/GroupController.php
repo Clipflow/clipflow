@@ -30,20 +30,22 @@ class GroupController extends Controller
      */
     public function index(Request $request): Response
     {
-
         $groups = Group::all();
 
-        // filter groups shown based on url query
-        if ($request->has('member')) {
+        if ($request->input('filter') === 'joined') {
             $groups = Group::whereHas('members', function ($query) use ($request) {
                 $query->where('user_id', $request->user()->id);
             })->get();
         }
 
-
+        if ($request->input('filter') === 'not-joined') {
+            $groups = Group::whereDoesntHave('members', function ($query) use ($request) {
+                $query->where('user_id', $request->user()->id);
+            })->get();
+        }
 
         return Inertia::render('Groups/Index', [
-            'groups' => $groups,
+            'groups' => GroupResource::collection($groups),
         ]);
     }
 
