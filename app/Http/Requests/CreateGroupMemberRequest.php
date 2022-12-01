@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class CreateGroupMemberRequest extends FormRequest
 {
@@ -24,7 +25,15 @@ class CreateGroupMemberRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => ['required', 'email', 'exists:users,email'],
+            // The email must not belong to a user that is already a member of the group
+            'email' => [
+                'required',
+                'email',
+                Rule::unique('group_members')->where(function ($query) {
+                    return $query->where('group_id', $this->group_id);
+                }),
+                'exists:users,email',
+            ],
             'role' => ['required', 'in:admin,member'],
         ];
     }
