@@ -38,4 +38,16 @@ Route::middleware('auth')->group(function () {
 Route::resource('groups', App\Http\Controllers\GroupController::class)
     ->middleware('auth');
 
+Route::get('/groups/{group}/members', [App\Http\Controllers\GroupMembersController::class, 'index'])
+    ->name('groups.members')
+    ->middleware('auth');
+
+Route::post('/groups/{group}/members', [App\Http\Controllers\GroupMembersController::class, 'store'])
+    ->name('groups.members.store')
+    ->middleware('auth');
+
+Route::delete('/groups/{group}/members/{groupMember}', [App\Http\Controllers\GroupMembersController::class, 'destroy'])
+    ->name('groups.members.destroy')
+    ->middleware('auth');
+
 require __DIR__.'/auth.php';

@@ -36,7 +36,7 @@ defineProps({
                         <CogIcon class="mr-1.5 flex-shrink-0 h-4 w-4 inline -mt-1"/>
                         <span>{{ $t('Settings') }}</span>
                     </TabLink>
-                    <TabLink :href="route('groups.edit', group.slug)" :active="route().current('groups.members')">
+                    <TabLink :href="route('groups.members', group.slug)" :active="route().current('groups.members')">
                         <UsersIcon class="mr-1.5 flex-shrink-0 h-4 w-4 inline -mt-1"/>
                         <span>{{ $t('Members') }}</span>
                     </TabLink>
